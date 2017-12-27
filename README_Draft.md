@@ -119,5 +119,5 @@ My rover identifies all samples, though, does not collect them.
 
 If I were to continue tackling this project I would improve the decision_step() function to give the Rover more smarts for more efficiently traversing the generated worldmap and implementing the collection of samples. To ensure a higher percentage of the worldmap is traversed more quickly with less repetition the Rover could be made to note intersections in some fashion by weigthing its turning towards less counted terrain pixels.
 
-A video output of the simulation running autonmously can be seen in the generated [simulation video](output/Rover Simulator 2017-12-27 1_30_19 AM)
+A video output of the simulation running autonmously can be seen in the generated [simulation video](output/Autonomous_Video.mp4)
 
