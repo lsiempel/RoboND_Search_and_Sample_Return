@@ -1,17 +1,17 @@
 ## Project: Search and Sample Return
-### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+*Deliverables completed by Lewis Siempelkamp*
 
 ---
 
 
-**The goals / steps of this project are the following:**  
+**The goals / steps of this project were the following:**  
 
 **Training / Calibration**  
 
-* Download the simulator and take data in "Training Mode"
+* The simulator was downloaded and sample data was recorded in "Training Mode"
 * Test out the functions in the Jupyter Notebook provided
 * Add functions to detect obstacles and samples of interest (golden rocks)
-* Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` you create in this step should demonstrate that your mapping pipeline works.
+* Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` created in this step demonstrates the performance of my mapping pipeline.
 * Use `moviepy` to process the images in your saved dataset with the `process_image()` function.  Include the video you produce as part of your submission.
 
 **Autonomous Navigation / Mapping**
@@ -37,6 +37,9 @@
 You're reading it!
 
 ### Notebook Analysis
+
+The Jupyter Notebook used for working out the "Perception Steps" of the Rover can be seen in the [Code Folder](code/)
+
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
 Here is an example of how to include an image in your writeup.
 
