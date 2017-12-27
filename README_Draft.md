@@ -84,7 +84,7 @@ A video showing a collage of pre and post processed images can be seen in the [t
 
 The modified perception.py and decision.py files can be seen in the [Code Folder](code/).
 
-## perception_step(Rover)
+**perception_step(Rover)**
 The addtions/modifications to my perception_step are as follows:
 * My perspective_transform() returns a binary mask of the transformed area in addition to the tranformed image to aid with the subsequent thresholding steps
 * Rather then creating a separate function to threshhold for obstacles I have taken the inverse of the navigable_threshold multiplied by the perspective transform mask
@@ -93,20 +93,24 @@ The addtions/modifications to my perception_step are as follows:
 * The rock pixels are cleaned up by only selecting the nearest rock pixel in each frame to represent a sample.
 * In addition to updating the worldmap, an array of the angle and distance to each navigable pixel in each frame is returned for subsequent use.
 
-## decision_step(Rover)
+**decision_step(Rover)**
 My decision step is only slightly modified from the provided template as I found I achieved passable results with the original once my perception step was tuned well.
 
 In fact the only change I made was to add the smarts to deal with becoming stuck on the 'boulder' obstacles scattered in various open areas. This was done by adding a stall timer that kept track of how long the throttle was activated without the velocity increasing beyong some low threshold. If the velocity did not increase beyond the threshold in a certain time span then the Rover decided it was stalled and executes a 45 degree turn.
 
-Other from the stall condition smarts and actions the decision tree was left alone with very good results. I played with biasing the turning in favor of one direction more than the other to cause the Rover to crawl along one esge of the terrain but felt it was unneccesary as I am able to consistently map out the majority of the terrain without issue with the stall timer implementation alone.
+Other from the stall condition smarts and actions the decision tree was left alone with very good results. I played with biasing the turning in favor of one direction more than the other to cause the Rover to crawl along one edge of the terrain but felt it was unneccesary as I am able to consistently map out the majority of the terrain without issue with the stall timer implementation alone.
 
 
 #### 2. Launching in autonomous mode your rover can navigate and map autonomously.  Explain your results and how you might improve them in your writeup.  
 
 I ran my Rover Simulator with the following settings:
+
 Windowed
-Screen REsolution: 1024x768
+
+Screen Resolution: 1024x768
+
 Graphics Quality: Good
+
 FPS: ~ 24
 
 In Autonomous mode with my drive_rover.py and associated scripts running in the background, my Rover consistently maps a significant portion of the map at ~85% total terrain fidelity.
@@ -115,4 +119,5 @@ My rover identifies all samples, though, does not collect them.
 
 If I were to continue tackling this project I would improve the decision_step() function to give the Rover more smarts for more efficiently traversing the generated worldmap and implementing the collection of samples. To ensure a higher percentage of the worldmap is traversed more quickly with less repetition the Rover could be made to note intersections in some fashion by weigthing its turning towards less counted terrain pixels.
 
+A video output of the simulation running autonmously can be seen in the generated [simulation video](output/Rover Simulator 2017-12-27 1_30_19 AM)
 
