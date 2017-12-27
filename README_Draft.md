@@ -24,7 +24,7 @@
 
 [image1]: ./output/input_raw.jpg
 [image2]: ./output/output_nav_thresh.jpg
-[image3]: ./output/rock_input.jpg 
+[image3]: ./calibration_images/example_rock1.jpg
 [image4]: ./output/rock_threshed.jpg 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
@@ -54,9 +54,12 @@ In my Perception.py script I opted to use the HSV method for all threshhgolding 
 The inputs/outputs to the color thresholding functions might look something like this:
 
 Navigable Terrain:
+
 ![alt_text][image1]
 ![alt_text][image2]
+
 Golden Rock Sample:
+
 ![alt text][image3]
 ![alt_text][image4]
 
