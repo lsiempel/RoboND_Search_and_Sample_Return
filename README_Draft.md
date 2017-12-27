@@ -40,8 +40,20 @@ You're reading it!
 
 The Jupyter Notebook used for working out the "Perception Steps" of the Rover can be seen in the [Code Folder](code/)
 
+Note that although the Jupyter Notebook was used to outline the perception.py script function content, variable names, and color thresholding values may differ slightly between the script in the notebook and the perception.py script. 
+
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-Here is an example of how to include an image in your writeup.
+
+Functions to perform color-selection of the navigable terrain, obstacles, and golden rock samples can be seen under the **Color Threshholding** Heading in the [Jupyter Notebook](code/Rover_Project_Test_Notebook.ipynb).
+
+The functions are called nav_color_thresh2, obs_color_thresh2, and rock_color_thresh respectively. The '2' in the function name reflects the fact that I played with multiple approaches at performing high fidelity color thresholding: RGB thresholding and HSV thresholding
+
+In my Perception.py script I opted to use the HSV method for all threshhgolding functions because it allowed for cleaner color selection particularily for the golden rock samples.
+
+The inputs/outputs to the color thresholding functions might look something like this:
+
+Terrain:
+
 
 ![alt text][image1]
 
