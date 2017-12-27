@@ -22,9 +22,10 @@
 
 [//]: # (Image References)
 
-[image1]: ./misc/rover_image.jpg
-[image2]: ./calibration_images/example_grid1.jpg
-[image3]: ./calibration_images/example_rock1.jpg 
+[image1]: ./output/input_raw.jpg
+[image2]: ./output/output_nav_thresh.jpg
+[image3]: ./output/rock_input.jpg 
+[image4]: ./output/rock_threshed.jpg 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -52,10 +53,12 @@ In my Perception.py script I opted to use the HSV method for all threshhgolding 
 
 The inputs/outputs to the color thresholding functions might look something like this:
 
-Terrain:
-
-
-![alt text][image1]
+Navigable Terrain:
+![alt_text][image1]
+![alt_text][image2]
+Golden Rock Sample:
+![alt text][image3]
+![alt_text][image4]
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
 And another! 
